@@ -11,12 +11,26 @@ import javax.inject.Inject;
 
 public class Main2Activity extends AppCompatActivity {
 
+    /**
+     * Dagger2 example of
+     * object injection
+     */
     @Inject
     HelloService helloService;
 
-
     @Inject
     RestService restService;
+
+
+    /**
+     * Dagger2 example of
+     * method Injection
+     * @param helloService
+     */
+    @Inject
+    private void setHelloService(HelloService helloService){
+        this.helloService = helloService;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
