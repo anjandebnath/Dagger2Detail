@@ -34,7 +34,7 @@ public class ResturantCFieldInjection {
     }
 
 
-    public void brewCoffee(){
-        coffeeBrewer.brewCoffee();
+    public void brewCoffee(CoffeeCallback callback){
+        coffeeBrewer.brewCoffee(callback);
     }
 }

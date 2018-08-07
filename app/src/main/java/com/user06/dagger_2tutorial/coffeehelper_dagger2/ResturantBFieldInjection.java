@@ -25,7 +25,6 @@ public class ResturantBFieldInjection {
 
     public ResturantBFieldInjection() {
         goDagger();
-        coffeeBrewer = coffeeHelper.getCoffeeBrewer(waterQuantity, flavor);
     }
 
     private void goDagger() {
@@ -33,7 +32,8 @@ public class ResturantBFieldInjection {
         coffeeComponent.provideCoffee(this);
     }
 
-    public void brewCoffee(){
-        coffeeBrewer.brewCoffee();
+    public void brewCoffee(CoffeeCallback callback){
+        coffeeBrewer = coffeeHelper.getCoffeeBrewer(waterQuantity, flavor);
+        coffeeBrewer.brewCoffee(callback);
     }
 }

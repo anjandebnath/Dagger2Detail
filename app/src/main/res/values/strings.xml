@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dagger-2Tutorial</string>
+    <string name="title_activity_di">DIActivity</string>
+    <string name="title_activity_empty">EmptyActivity</string>
 </resources>

@@ -21,10 +21,12 @@ public class CoffeeBrewer {
         this.waterHeater = new WaterHeater(this.water);
     }
 
-    public void brewCoffee(){
+    public void brewCoffee(CoffeeCallback callback){
         waterHeater.on();
         waterHeater.off();
-        Log.d(TAG, "Water:: " + water.isWaterHot() + "Flavor:: "+coffee.getFlavor());
+        Log.d(TAG, "Water:: " + water.isWaterHot() + "  Flavor:: "+coffee.getFlavor());
         Log.d(TAG, "----------- Coffee is ready to be served ---------------------");
+        String status = "  Flavor:: "+coffee.getFlavor();
+        callback.coffeeStatus(status);
     }
 }
