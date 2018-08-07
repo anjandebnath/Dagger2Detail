@@ -15,6 +15,15 @@
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".mvpui_dagger2.MVPUIActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".coffeehelper_dagger2.DIActivity"
+            android:label="@string/title_activity_di"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

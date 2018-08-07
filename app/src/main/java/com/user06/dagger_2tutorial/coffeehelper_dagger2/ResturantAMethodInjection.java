@@ -41,7 +41,7 @@ public class ResturantAMethodInjection {
         coffeeComponent.provideCoffee(this);
     }
 
-    public void brewCoffee(){
-        coffeeBrewer.brewCoffee();
+    public void brewCoffee(CoffeeCallback coffeeCallback){
+        coffeeBrewer.brewCoffee(coffeeCallback);
     }
 }

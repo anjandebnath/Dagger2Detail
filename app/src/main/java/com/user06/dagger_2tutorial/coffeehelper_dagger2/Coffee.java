@@ -7,7 +7,10 @@ package com.user06.dagger_2tutorial.coffeehelper_dagger2;
 public class Coffee {
 
 
+    FLAVORS flavor;
+
     public Coffee(FLAVORS flavor) {
+        this.flavor = flavor;
     }
 
     public enum FLAVORS{
@@ -17,6 +20,17 @@ public class Coffee {
     }
 
     public FLAVORS getFlavor(){
-        return FLAVORS.ESPRESSO;
+        FLAVORS myFlavor = null;
+        switch (flavor){
+            case LATTE:
+                myFlavor = FLAVORS.LATTE;
+                break;
+            case ESPRESSO:
+                myFlavor = FLAVORS.ESPRESSO;
+                break;
+            default:
+                myFlavor =  FLAVORS.AMERICANO;
+        }
+        return myFlavor;
     }
 }
