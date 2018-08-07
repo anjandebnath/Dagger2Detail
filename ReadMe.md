@@ -20,7 +20,9 @@ to get the basic idea please go through `the codes under package`
 
 > coffeehelper (**no DI**)
 
-> coffeeehelper_dagger2  (**DI with Dagger2 /** **Field Injection**)
+> coffeeehelper_dagger2  (**DI with Dagger2**)
+   - Field Injection ( **ResturantAFieldInjection** )
+   - MethodInjection ( **ResturantAMethodInjection** )
 
 ## Dagger2 with MVP
 - This is actually contain a simple `MainActivity` and a dagger activity named `Main2Activity`

@@ -9,10 +9,10 @@ import javax.inject.Inject;
  * Created by Anjan Debnath on 8/7/2018.
  * Copyright (c) 2018, W3 Engineers Ltd. All rights reserved.
  */
-public class ResturantC {
+public class ResturantBFieldInjection {
 
-    public static final int waterQuantity = 15;
-    public static final Coffee.FLAVORS flavor = Coffee.FLAVORS.AMERICANO;
+    public static final int waterQuantity = 10;
+    public static final Coffee.FLAVORS flavor = Coffee.FLAVORS.LATTE;
 
     //region readme
     //@Inject = Hey Dagger, I want an instance of CoffeeHelper, So please provide me the instance
@@ -23,16 +23,15 @@ public class ResturantC {
 
     private CoffeeBrewer coffeeBrewer;
 
-    public ResturantC() {
+    public ResturantBFieldInjection() {
         goDagger();
         coffeeBrewer = coffeeHelper.getCoffeeBrewer(waterQuantity, flavor);
     }
 
-    public void goDagger() {
+    private void goDagger() {
         CoffeeComponent coffeeComponent = DaggerCoffeeComponent.builder().build();
         coffeeComponent.provideCoffee(this);
     }
-
 
     public void brewCoffee(){
         coffeeBrewer.brewCoffee();

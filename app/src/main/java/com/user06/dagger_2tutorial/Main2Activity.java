@@ -13,7 +13,7 @@ public class Main2Activity extends AppCompatActivity {
 
     /**
      * Dagger2 example of
-     * object injection
+     * field/object injection
      */
     @Inject
     public HelloService helloService;
