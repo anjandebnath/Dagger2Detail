@@ -1,5 +1,8 @@
 package com.user06.dagger_2tutorial.coffeehelper_dagger2;
 
+import com.user06.dagger_2tutorial.coffeehelper_dagger2.component.CoffeeComponent;
+import com.user06.dagger_2tutorial.coffeehelper_dagger2.component.DaggerCoffeeComponent;
+
 import javax.inject.Inject;
 
 /**
@@ -14,12 +17,20 @@ public class ResturantC {
     //region readme
     //@Inject = Hey Dagger, I want an instance of CoffeeHelper, So please provide me the instance
     //endregion readme
-    @Inject
+    @Inject  // Field injection
     public CoffeeHelper coffeeHelper; //Dagger does not support injection into private fields
+
+
     private CoffeeBrewer coffeeBrewer;
 
     public ResturantC() {
+        goDagger();
         coffeeBrewer = coffeeHelper.getCoffeeBrewer(waterQuantity, flavor);
+    }
+
+    public void goDagger() {
+        CoffeeComponent coffeeComponent = DaggerCoffeeComponent.builder().build();
+        coffeeComponent.provideCoffee(this);
     }
 
 

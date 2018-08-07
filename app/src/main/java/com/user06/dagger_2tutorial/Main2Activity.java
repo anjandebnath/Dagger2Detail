@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
      * @param helloService
      */
     @Inject
-    private void setHelloService(HelloService helloService){
+    public void setHelloService(HelloService helloService){
         this.helloService = helloService;
     }
 
