@@ -10,7 +10,7 @@ Dagger2 supports these types of Injection
 
 
 ## How Dagger work
-this [link](https://medium.com/@laaptu9/part-2-simple-ways-to-stab-with-dagger-2-module-component-and-field-injection-e85cbef8678b) will give much clear idea about Dagger2
+This [Field Injection](https://medium.com/@laaptu9/part-2-simple-ways-to-stab-with-dagger-2-module-component-and-field-injection-e85cbef8678b) and [Method and Constructor Injection](https://medium.com/@laaptu9/part-3-simple-ways-to-stab-with-dagger-2-method-injection-constructor-injection-aa9a17cbb527) will give much clear idea about Dagger2
 ![image](https://github.com/anjandebnath/Dagger2Detail/blob/master/resources/1_U13tzZlwgfogXVcTeniiMg.png)
 
 
