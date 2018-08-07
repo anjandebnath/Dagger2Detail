@@ -1,7 +1,6 @@
 package com.user06.dagger_2tutorial.coffeehelper_dagger2.component;
 
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantAFieldInjection;
-import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantAMethodInjection;
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantBFieldInjection;
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantCFieldInjection;
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.module.CoffeeProvider;
@@ -31,5 +30,4 @@ public interface CoffeeComponent {
     void provideCoffee(ResturantBFieldInjection resturantB);
     void provideCoffee(ResturantCFieldInjection resturantC);
 
-    void provideCoffee(ResturantAMethodInjection resturantA);
 }
