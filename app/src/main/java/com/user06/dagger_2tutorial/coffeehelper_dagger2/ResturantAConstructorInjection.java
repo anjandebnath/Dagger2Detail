@@ -9,31 +9,33 @@ import javax.inject.Inject;
  * Created by Anjan Debnath on 8/7/2018.
  * Copyright (c) 2018, W3 Engineers Ltd. All rights reserved.
  */
-public class ResturantBFieldInjection {
+public class ResturantAConstructorInjection {
 
-    public static final int waterQuantity = 10;
-    public static final Coffee.FLAVORS flavor = Coffee.FLAVORS.LATTE;
 
     //region readme
     //@Inject = Hey Dagger, I want an instance of CoffeeHelper, So please provide me the instance
     //endregion readme
-    @Inject  // Field injection
-    public CoffeeHelper coffeeHelper; //Dagger does not support injection into private fields
-
+    @Inject
+    public CoffeeHelper coffeeHelper;
 
     private CoffeeBrewer coffeeBrewer;
 
-    public ResturantBFieldInjection() {
+
+    public ResturantAConstructorInjection() {
         goDagger();
-        coffeeBrewer = coffeeHelper.getCoffeeBrewer(waterQuantity, flavor);
+        coffeeBrewer = coffeeHelper.getCoffeeBrewer();
     }
 
-    private void goDagger() {
+
+    /**
+     *  if no component is present we won’t get our dependency.
+     */
+    public void goDagger(){
         CoffeeComponent coffeeComponent = DaggerCoffeeComponent.builder().build();
-        coffeeComponent.provideCoffee(this);
+        coffeeComponent.injectCoffeeHelper(this);
     }
 
-    public void brewCoffee(){
-        coffeeBrewer.brewCoffee();
+    public String brewCoffee(CoffeeCallback coffeeCallback){
+       return  coffeeBrewer.brewCoffee(coffeeCallback);
     }
 }

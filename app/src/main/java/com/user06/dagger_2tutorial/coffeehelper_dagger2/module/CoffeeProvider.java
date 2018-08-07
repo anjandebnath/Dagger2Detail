@@ -1,5 +1,6 @@
 package com.user06.dagger_2tutorial.coffeehelper_dagger2.module;
 
+import com.user06.dagger_2tutorial.coffeehelper_dagger2.Coffee;
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.CoffeeHelper;
 
 import dagger.Module;
@@ -26,7 +27,12 @@ public class CoffeeProvider {
      */
     //endregion readme
     @Provides
-    CoffeeHelper getCoffeeHelper(){
-        return new CoffeeHelper();
+    public int getWaterQuantity(){
+        return 10;
+    }
+
+    @Provides
+    public Coffee.FLAVORS getCoffeeFlavors(){
+        return Coffee.FLAVORS.ESPRESSO;
     }
 }

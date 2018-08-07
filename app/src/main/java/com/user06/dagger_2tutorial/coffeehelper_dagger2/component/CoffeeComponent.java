@@ -1,8 +1,6 @@
 package com.user06.dagger_2tutorial.coffeehelper_dagger2.component;
 
-import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantAFieldInjection;
-import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantBFieldInjection;
-import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantCFieldInjection;
+import com.user06.dagger_2tutorial.coffeehelper_dagger2.ResturantAConstructorInjection;
 import com.user06.dagger_2tutorial.coffeehelper_dagger2.module.CoffeeProvider;
 
 import dagger.Component;
@@ -26,8 +24,7 @@ public interface CoffeeComponent {
      *
      * Any dependent class must be declared in this manner.
      */
-    void provideCoffee(ResturantAFieldInjection resturantA);
-    void provideCoffee(ResturantBFieldInjection resturantB);
-    void provideCoffee(ResturantCFieldInjection resturantC);
+    void injectCoffeeHelper(ResturantAConstructorInjection resturantA);
+
 
 }

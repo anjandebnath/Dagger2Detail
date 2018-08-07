@@ -8,11 +8,12 @@ import android.util.Log;
  */
 public class CoffeeBrewer {
 
-    public static final String TAG = "TAG";
+    public static final String TAG = "CoffeeBrewer";
 
     private Coffee coffee;
     private Water water;
     private WaterHeater waterHeater;
+
 
 
     public CoffeeBrewer(Water water, Coffee coffee) {
@@ -21,10 +22,15 @@ public class CoffeeBrewer {
         this.waterHeater = new WaterHeater(this.water);
     }
 
-    public void brewCoffee(){
+    public String brewCoffee(CoffeeCallback coffeeCallback){
         waterHeater.on();
         waterHeater.off();
         Log.d(TAG, "Water:: " + water.isWaterHot() + "Flavor:: "+coffee.getFlavor());
         Log.d(TAG, "----------- Coffee is ready to be served ---------------------");
+
+        String title = "Water:: " + water.isWaterHot() + "  Flavor:: "+ coffee.getFlavor();
+        coffeeCallback.coffeeStatus(title);
+
+        return title;
     }
 }
