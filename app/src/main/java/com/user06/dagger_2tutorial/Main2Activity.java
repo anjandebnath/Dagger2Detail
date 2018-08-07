@@ -16,10 +16,10 @@ public class Main2Activity extends AppCompatActivity {
      * object injection
      */
     @Inject
-    HelloService helloService;
+    public HelloService helloService;
 
     @Inject
-    RestService restService;
+    public RestService restService;
 
 
     /**
