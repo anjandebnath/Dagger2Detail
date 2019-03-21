@@ -1,0 +1,2 @@
+Suppose you are asked to implement a UserSetting service where the user
+can change the settings but before that t+he user has to be authenticated. One way to implement this would be:
