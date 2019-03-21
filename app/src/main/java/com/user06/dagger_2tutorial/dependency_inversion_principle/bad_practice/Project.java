@@ -17,6 +17,7 @@ public class Project {
  * such as BackEndDeveloper and FrontEndDeveloper.
  *
  * We are actually violating the first part of the dependency inversion principle.
+ *    "High-level modules should not depend on low-level modules. Both should depend on abstractions."
  */
 
 
@@ -26,4 +27,5 @@ public class Project {
  *
  * Regarding the project scope those are details since in both cases they are forms of development.
  * Thus the second part of the dependency inversion principle is violated.
+ *      "Abstractions should not depend on details. Details should depend on abstractions."
  */
