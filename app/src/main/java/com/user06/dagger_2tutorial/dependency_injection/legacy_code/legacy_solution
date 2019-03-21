@@ -1,0 +1,4 @@
+After some evaluation we thought of using Google Address Validation Service.
+
+Assume "GoogleAddressVerificationService" is a service provider, provided by Google
+which takes Address as a String and validate it.
