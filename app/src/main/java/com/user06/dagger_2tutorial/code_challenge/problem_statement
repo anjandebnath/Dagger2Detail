@@ -1,0 +1,14 @@
+
+Dependency Injection complete assignment:
+1.Create an application where you will have 2 separate messaging  service
+    1. Email Service
+    2. Sms Service
+2.Email Service will send email to recipient.
+3.Sms Service will send sms to recipient.
+4.Before sending the message through the messaging service , you have to validate the message by a Validator.
+5.Validator will process the message and use the messaging service to send the message.
+6.Each service will have it's own service provider so each will provide validation support & validate specific message and
+  application don't need to bother about the validator for specific service.
+7.Create a Main class and design your solution using dependency injection.
+
+
