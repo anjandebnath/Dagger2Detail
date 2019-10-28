@@ -1,38 +1,41 @@
-# ACK
-this simple project contains the base example of Dagger2.
+$project
+========
 
-## Types of Dependency Injection (DI)
+$project will solve your problem of where to start with documentation,
+by providing a basic explanation of how to do it easily.
 
-Dagger2 supports these types of Injection
-- Field Injection
-- Constructor Injection
-- Method Injection
+Look how easy it is to use:
 
+    import project
+    # Get your stuff done
+    project.do_stuff()
 
-## How Dagger work
-This [Field Injection](https://medium.com/@laaptu9/part-2-simple-ways-to-stab-with-dagger-2-module-component-and-field-injection-e85cbef8678b) and [Method and Constructor Injection](https://medium.com/@laaptu9/part-3-simple-ways-to-stab-with-dagger-2-method-injection-constructor-injection-aa9a17cbb527) will give much clear idea about Dagger2
-![image](https://github.com/anjandebnath/Dagger2Detail/blob/master/resources/1_U13tzZlwgfogXVcTeniiMg.png)
+Features
+--------
 
+- Be awesome
+- Make things faster
 
-## How to start
+Installation
+------------
 
-to get the basic idea please go through `the codes under package`
+Install $project by running:
 
-> coffeehelper (**no DI**)
+    install project
 
-> coffeeehelper_dagger2  (**DI with Dagger2**)
-   - Field Injection ( **ResturantAFieldInjection** ) [branch: master]
-   - Method Injection ( **ResturantAMethodInjection** ) [branch: MethodInjection]
-   - Constructor Injection (**ResturantAConstructorInjection**) [branch: constructor_injection]
+Contribute
+----------
 
-## Dagger2 with MVP
-- This is actually contain a simple `MainActivity` and a dagger activity named `Main2Activity`
-- Also it provides a basic example of `DI` with `MVP` pattern.
-- you can find the Dependency Injection with MVP on the pacakge named `mvpui_dagger2`
+- Issue Tracker: github.com/$project/$project/issues
+- Source Code: github.com/$project/$project
 
+Support
+-------
 
+If you are having issues, please let us know.
+We have a mailing list located at: project@google-groups.com
 
+License
+-------
 
-*Best Regards*
-
-**Anjan Debnath**
+The project is licensed under the BSD license.
